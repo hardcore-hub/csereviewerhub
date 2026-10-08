@@ -1,11 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 
-    <!-- IMPORTANT FOR MOBILE -->
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
 
     <meta name="theme-color" content="#0d6efd">
 
@@ -16,110 +18,29 @@
           href="https://cdn-icons-png.flaticon.com/128/6865/6865123.png">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         html,
         body {
-            width: 100%;
-            height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            background: #f5f7fb;
+            width: 100%;
+            height: 100%;
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #app {
-            width: 100%;
-            height: 100dvh;
-            min-height: 100dvh;
-        }
-
-        #loading {
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background: #f5f7fb;
-            transition: opacity .3s ease;
-        }
-
-        .loader-box {
-            text-align: center;
-        }
-
-        .loader {
-            width: 42px;
-            height: 42px;
-            border: 4px solid #dbe5f5;
-            border-top-color: #0d6efd;
-            border-radius: 50%;
-            animation: spin .8s linear infinite;
-            margin: 0 auto 15px;
-        }
-
-        .loading-text {
-            font-size: 14px;
-            color: #667085;
-            font-weight: 500;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-
-            html,
-            body {
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-            }
-
-            #app {
-                width: 100%;
-                height: 100dvh;
-            }
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 
 <body>
 
-<div id="loading">
-    <div class="loader-box">
-        <div class="loader"></div>
-        <div class="loading-text">Loading CSE Reviewer System...</div>
-    </div>
-</div>
-
-<div id="app"></div>
-
 <script>
-
-    const APP_URL =
+    const APP_SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbyXFl_fUqKOkPA1TitJ25VFkREaE0Ny2t-1JhNcAOwmMQgqxSI-2OyUWOtNZJQ3iHj9/exec";
 
-    /*
-     * Redirect directly to the Apps Script application.
-     *
-     * This is better than putting the application inside
-     * an iframe because the Apps Script page can then use
-     * the phone's real viewport.
-     */
-    window.location.replace(APP_URL);
-
+    // Open the Apps Script application directly
+    window.location.replace(APP_SCRIPT_URL);
 </script>
 
 </body>
